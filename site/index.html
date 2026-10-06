@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wallpapers</title>
+  <meta name="description" content="A collection of free desktop and phone wallpapers.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%237c3aed'/><stop offset='1' stop-color='%23ec4899'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23g)'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <h1>Wallpapers</h1>
+      <p class="tagline">Fresh backgrounds for your desktop &amp; phone. Click any one to preview, then grab it.</p>
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search wallpapers…" aria-label="Search wallpapers" autocomplete="off">
+        <button id="shuffle" class="btn" type="button" title="Open a random wallpaper">🎲 Surprise me</button>
+        <button id="theme" class="btn icon" type="button" aria-label="Toggle theme" title="Toggle theme">🌓</button>
+      </div>
+      <nav id="filters" class="filters" aria-label="Categories"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p id="status" class="status" role="status">Loading…</p>
+    <ul id="grid" class="grid"></ul>
+  </main>
+
+  <footer class="wrap footer">
+    <span id="count"></span>
+  </footer>
+
+  <dialog id="viewer" class="viewer" aria-label="Wallpaper preview">
+    <button class="nav prev" type="button" aria-label="Previous">‹</button>
+    <figure>
+      <img id="viewer-img" alt="">
+      <figcaption>
+        <div>
+          <strong id="viewer-title"></strong>
+          <span id="viewer-meta" class="meta"></span>
+        </div>
+        <div class="actions">
+          <a id="viewer-open" class="btn" target="_blank" rel="noopener">Full size ↗</a>
+          <a id="viewer-download" class="btn primary" download>Download ⬇</a>
+        </div>
+      </figcaption>
+    </figure>
+    <button class="nav next" type="button" aria-label="Next">›</button>
+    <button class="close" type="button" aria-label="Close">✕</button>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
